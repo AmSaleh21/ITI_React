@@ -14,11 +14,9 @@ let About = () => {
                     ac rhoncus. Mauris ac enim libero. Nam feugiat pharetra metus, id convallis libero. In commodo
                 </p>
                 <div className="d-flex justify-content-center">
-                    <NavLink className={'btn'} to={""}>
+                    <NavLink className={'btn'} to={"/"}>
                         <Button label={'home'} className={'p-button p-button-rounded p-button-outlined p-button-primary'}></Button>
                     </NavLink>
-                    {/*<button routerLink="/departments" pButton pRipple type="button"*/}
-                    {/*    label="Departments" class="mx-2 p-button-sm p-button-outlined p-button-rounded"></button>*/}
                 </div>
             </div>
         </div>
