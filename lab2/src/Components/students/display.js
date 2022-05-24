@@ -1,6 +1,12 @@
 import {Component} from "react";
 
 export default class Display extends Component {
+
+    deleteStudent = (index) => {
+        this.props.data.splice(index, 1)
+        this.props.onDelete(this.props.data)
+    }
+
     table = () => {
         return (
             <table className="table table-sm table-hover table-striped">
@@ -9,6 +15,7 @@ export default class Display extends Component {
                     <th scope="col">#</th>
                     <th scope="col">Name</th>
                     <th scope="col">Age</th>
+                    <th scope="col">options</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -19,6 +26,10 @@ export default class Display extends Component {
                             <td>{listValue.id}</td>
                             <td>{listValue.name}</td>
                             <td>{listValue.age}</td>
+                            <td>
+                                <button className={'btn btn-danger btn-sm'}
+                                        onClick={()=> this.deleteStudent(index)}>delete</button>
+                            </td>
                         </tr>
                         );
                     })

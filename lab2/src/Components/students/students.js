@@ -33,6 +33,13 @@ export default class Students extends Component {
         }
     }
 
+    update = () => {
+        this.setState({
+            studentsList: this.state.studentsList
+        })
+        localStorage.setItem('students', JSON.stringify(this.state.studentsList))
+    }
+
     students = () => {
         return (
             <div className={'container form-container'}>
@@ -61,7 +68,7 @@ export default class Students extends Component {
                 <hr/>
                 <p className={'h3 mb-3 fw-normal text-center'}>Students Data table</p>
 
-                <Display data={this.state.studentsList}/>
+                <Display data={this.state.studentsList} onDelete={this.update}/>
             </div>
         )
     }
