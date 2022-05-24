@@ -8,7 +8,7 @@ let AllSingers = () => {
     const error = (err) => {
         return (
             <div className={'alert alert-error'}>
-                <p className={'h3'}>{`oOps, ${err} happened, try again later`}</p>
+                <p className={'h3'}>{`oOps, ${err}, try again later`}</p>
             </div>
         )
     }
@@ -43,7 +43,7 @@ let AllSingers = () => {
     }
 
     return (
-        <div className="d-flex align-items-center justify-content-center vh-100">
+        <div className="d-flex flex-wrap align-items-center justify-content-center vh-100">
             {renderSingers()}
         </div>
     )

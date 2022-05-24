@@ -2,7 +2,7 @@ import './App.css';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 import Navigation from "./Components/core/Navigation"
-import Cover from "./Components/library/Cover"
+import Cover from "./Components/library/cover/Cover"
 import AllSingers from "./Components/library/AllSingers";
 import Singer from "./Components/library/Singer";
 import About from "./Components/core/About";

@@ -1,7 +1,14 @@
-import {NavLink} from "react-router-dom";
+import {NavLink, useLocation} from "react-router-dom";
 import {Button} from "primereact/button";
 
 const Navigation = () => {
+
+    let location = useLocation();
+
+    if(location.pathname === '/'){
+        return null
+    }
+
     return (
         <nav className="navbar navbar-expand-lg navbar-expand-md mx-5">
             <NavLink to={""}>
