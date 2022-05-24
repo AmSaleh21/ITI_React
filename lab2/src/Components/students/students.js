@@ -66,6 +66,10 @@ export default class Students extends Component {
         )
     }
 
+    componentDidMount() {
+        this.lastId = this.state.studentsList.length
+    }
+
     render() {
         return (
             this.students()
